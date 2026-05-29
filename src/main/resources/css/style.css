@@ -1,0 +1,128 @@
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+}
+
+.page {
+    -fx-background-color: #f5f7fb;
+}
+
+.login-panel {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(33, 49, 84, 0.16), 24, 0, 0, 10);
+}
+
+.brand-title {
+    -fx-font-size: 44px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #2a7de1;
+}
+
+.brand-small {
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #2a7de1;
+}
+
+.subtitle {
+    -fx-text-fill: #667085;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1d2939;
+}
+
+.sidebar {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e4e7ec;
+    -fx-border-width: 0 1 0 0;
+}
+
+.chat-panel {
+    -fx-background-color: #f8fafc;
+}
+
+.chat-header,
+.server-header {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e4e7ec;
+    -fx-border-width: 0 0 1 0;
+}
+
+.message-input {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e4e7ec;
+    -fx-border-width: 1 0 0 0;
+}
+
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d0d5dd;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 12;
+}
+
+.button {
+    -fx-background-color: #2a7de1;
+    -fx-text-fill: white;
+    -fx-font-weight: 700;
+    -fx-background-radius: 8px;
+    -fx-padding: 10 18;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1f6fcb;
+}
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #e4e7ec;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 8 10;
+}
+
+.list-cell:selected {
+    -fx-background-color: #eaf3ff;
+    -fx-text-fill: #1d2939;
+}
+
+.messages-list {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.message-own {
+    -fx-background-color: #2a7de1;
+    -fx-background-radius: 8px;
+}
+
+.message-own .label {
+    -fx-text-fill: white;
+}
+
+.message-other {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #e4e7ec;
+    -fx-border-radius: 8px;
+}
+
+.message-author {
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+.message-time {
+    -fx-font-size: 11px;
+    -fx-opacity: 0.75;
+}
