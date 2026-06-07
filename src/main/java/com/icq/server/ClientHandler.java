@@ -29,7 +29,29 @@ public class ClientHandler implements Runnable {
             String line;
             while ((line = reader.readLine()) != null) {
                 Message message = XMLMessageParser.parse(line);
-                if ("connect".equals(message.getType())) {
+                if ("register".equals(message.getType())) {
+                    boolean registered = serverCore.registerUser(message.getUser(), message.getPassword(), message.getAvatarPath(), message.getEmail());
+                    send(status(registered ? "register_success" : "register_error", registered ? "Registration completed" : "Username already exists or password is too short"));
+                    break;
+                } else if ("password_reset_request".equals(message.getType())) {
+                    send(XMLMessageBuilder.build(serverCore.requestPasswordReset(message)));
+                    break;
+                } else if ("password_reset_confirm".equals(message.getType())) {
+                    send(XMLMessageBuilder.build(serverCore.confirmPasswordReset(message)));
+                    break;
+                } else if ("login".equals(message.getType())) {
+                    username = message.getUser();
+                    boolean accepted = serverCore.loginClient(username, message.getPassword(), this);
+                    Message response = new Message();
+                    response.setType(accepted ? "auth_success" : "auth_error");
+                    response.setUser(username);
+                    response.setText(accepted ? "Welcome" : "Invalid login or password");
+                    send(XMLMessageBuilder.build(response));
+                    if (!accepted) {
+                        break;
+                    }
+                    serverCore.broadcastState();
+                } else if ("connect".equals(message.getType())) {
                     username = message.getUser();
                     boolean accepted = serverCore.registerClient(username, this);
                     if (!accepted) {
@@ -63,9 +85,17 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     private String error(String text) {
+        return status("error", text);
+    }
+
+    private String status(String type, String text) {
         Message message = new Message();
-        message.setType("error");
+        message.setType(type);
         message.setText(text);
         return XMLMessageBuilder.build(message);
     }

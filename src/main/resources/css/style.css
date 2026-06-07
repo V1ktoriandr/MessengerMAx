@@ -3,126 +3,384 @@
     -fx-font-size: 14px;
 }
 
-.page {
-    -fx-background-color: #f5f7fb;
+.auth-page,
+.messenger-page {
+    -fx-background-color: #13091f;
 }
 
-.login-panel {
-    -fx-background-color: white;
+.auth-shell {
+    -fx-background-color: #211233;
     -fx-background-radius: 8px;
-    -fx-effect: dropshadow(gaussian, rgba(33, 49, 84, 0.16), 24, 0, 0, 10);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.45), 30, 0, 0, 18);
 }
 
-.brand-title {
-    -fx-font-size: 44px;
+.auth-brand {
+    -fx-background-color: #7c3aed;
+    -fx-background-radius: 8 0 0 8;
+}
+
+.auth-card {
+    -fx-background-color: #241438;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 24, 0, 0, 12);
+}
+
+.auth-logo {
+    -fx-font-size: 40px;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-wrap-text: false;
+}
+
+.auth-heading,
+.form-title {
+    -fx-font-size: 24px;
     -fx-font-weight: 800;
-    -fx-text-fill: #2a7de1;
+    -fx-text-fill: white;
 }
 
-.brand-small {
-    -fx-font-size: 20px;
-    -fx-font-weight: 800;
-    -fx-text-fill: #2a7de1;
+.auth-copy {
+    -fx-text-fill: #c9b8f2;
 }
 
-.subtitle {
-    -fx-text-fill: #667085;
-}
-
-.section-title {
-    -fx-font-size: 16px;
-    -fx-font-weight: 700;
-    -fx-text-fill: #1d2939;
-}
-
-.sidebar {
-    -fx-background-color: #ffffff;
-    -fx-border-color: #e4e7ec;
+.dialog-sidebar {
+    -fx-background-color: #1a0f2b;
+    -fx-border-color: #33214d;
     -fx-border-width: 0 1 0 0;
 }
 
-.chat-panel {
-    -fx-background-color: #f8fafc;
+.profile-block {
+    -fx-background-color: #26163c;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.22), 12, 0, 0, 6);
 }
 
-.chat-header,
-.server-header {
+.profile-name,
+.chat-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+}
+
+.chat-title {
+    -fx-text-fill: #241438;
+}
+
+.profile-status,
+.chat-subtitle,
+.typing-label {
+    -fx-text-fill: #a78bfa;
+}
+
+.composer .text-field {
+    -fx-background-color: #f7f5ff;
+    -fx-border-color: #ded7ff;
+    -fx-text-fill: #211233;
+    -fx-prompt-text-fill: #8b7aa8;
+}
+
+.chat-surface {
+    -fx-background-color: #f2f0ff;
+}
+
+.chat-topbar,
+.composer {
     -fx-background-color: #ffffff;
-    -fx-border-color: #e4e7ec;
+    -fx-border-color: #e7e3ff;
+}
+
+.chat-topbar {
     -fx-border-width: 0 0 1 0;
 }
 
-.message-input {
-    -fx-background-color: #ffffff;
-    -fx-border-color: #e4e7ec;
+.composer {
     -fx-border-width: 1 0 0 0;
 }
 
-.text-field {
-    -fx-background-color: #ffffff;
-    -fx-border-color: #d0d5dd;
+.message-area {
+    -fx-background-color: #e8e6ff;
+}
+
+.date-chip {
+    -fx-background-color: rgba(77, 53, 135, 0.14);
+    -fx-background-radius: 8px;
+    -fx-text-fill: #5b4b83;
+    -fx-padding: 5 12;
+    -fx-alignment: center;
+    -fx-max-width: 90px;
+}
+
+.text-field,
+.password-field {
+    -fx-background-color: #160d24;
+    -fx-border-color: #4c2d74;
     -fx-border-radius: 8px;
     -fx-background-radius: 8px;
-    -fx-padding: 10 12;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #8f7aad;
+    -fx-padding: 11 13;
 }
 
 .button {
-    -fx-background-color: #2a7de1;
+    -fx-background-color: #8b5cf6;
     -fx-text-fill: white;
-    -fx-font-weight: 700;
+    -fx-font-weight: 800;
     -fx-background-radius: 8px;
     -fx-padding: 10 18;
     -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #1f6fcb;
+    -fx-background-color: #a78bfa;
+}
+
+.ghost-button,
+.icon-button {
+    -fx-background-color: #35204f;
+}
+
+.recording {
+    -fx-background-color: #ef4444;
 }
 
 .list-view {
-    -fx-background-color: white;
-    -fx-border-color: #e4e7ec;
-    -fx-border-radius: 8px;
-    -fx-background-radius: 8px;
-}
-
-.list-cell {
-    -fx-background-color: transparent;
-    -fx-padding: 8 10;
-}
-
-.list-cell:selected {
-    -fx-background-color: #eaf3ff;
-    -fx-text-fill: #1d2939;
-}
-
-.messages-list {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
 }
 
-.message-own {
-    -fx-background-color: #2a7de1;
+.list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 7 3;
+}
+
+.list-cell:selected .dialog-row,
+.list-cell:selected .dialog-row-online {
+    -fx-background-color: #3b2260;
+}
+
+.dialog-row,
+.dialog-row-online {
+    -fx-background-color: #211233;
     -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+
+.dialog-row-online {
+    -fx-border-color: #22c55e;
+    -fx-border-width: 0 0 0 3;
+    -fx-border-radius: 8px;
+}
+
+.dialog-name {
+    -fx-font-weight: 800;
+    -fx-text-fill: white;
+}
+
+.dialog-last,
+.dialog-time {
+    -fx-text-fill: #a99abc;
+    -fx-font-size: 12px;
+}
+
+.unread-badge {
+    -fx-background-color: #ec4899;
+    -fx-background-radius: 999px;
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+    -fx-padding: 2 7;
+}
+
+.messages-list {
+    -fx-background-color: transparent;
+}
+
+.message-own,
+.message-other {
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.18), 10, 0, 0, 4);
+}
+
+.message-own {
+    -fx-background-color: #7c3aed;
+}
+
+.message-other {
+    -fx-background-color: #ffffff;
 }
 
 .message-own .label {
     -fx-text-fill: white;
 }
 
-.message-other {
-    -fx-background-color: white;
-    -fx-background-radius: 8px;
-    -fx-border-color: #e4e7ec;
-    -fx-border-radius: 8px;
+.message-other .label {
+    -fx-text-fill: #2b2040;
 }
 
 .message-author {
     -fx-font-size: 12px;
-    -fx-font-weight: 700;
+    -fx-font-weight: 800;
 }
 
 .message-time {
     -fx-font-size: 11px;
     -fx-opacity: 0.75;
+}
+
+.button-svg {
+    -fx-fill: white;
+}
+
+.button-image-icon {
+    -fx-opacity: 1;
+}
+
+.fallback-icon {
+    -fx-text-fill: white;
+    -fx-font-weight: 900;
+}
+
+.avatar-edit-button {
+    -fx-background-color: #8b5cf6;
+    -fx-background-radius: 999px;
+    -fx-min-width: 24px;
+    -fx-min-height: 24px;
+    -fx-max-width: 24px;
+    -fx-max-height: 24px;
+    -fx-padding: 4px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 8, 0, 0, 2);
+}
+
+.sidebar-tabs {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+    -fx-background-radius: 8px;
+    -fx-padding: 5px;
+}
+
+.tab-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ddd6fe;
+}
+
+.tab-button:hover {
+    -fx-background-color: #35204f;
+}
+
+.composer-shell {
+    -fx-background-color: #ffffff;
+}
+
+.recording-timer {
+    -fx-text-fill: #ef4444;
+    -fx-font-weight: 800;
+}
+
+.recording-waves {
+    -fx-background-color: #fff1f2;
+    -fx-border-color: #fecdd3;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 8 22;
+}
+
+.recording-waves .label {
+    -fx-text-fill: #be123c;
+    -fx-font-weight: 800;
+}
+
+.wave-bar {
+    -fx-background-color: #ef4444;
+    -fx-background-radius: 999px;
+    -fx-min-width: 5px;
+    -fx-min-height: 22px;
+    -fx-max-width: 5px;
+    -fx-max-height: 22px;
+}
+
+.wave-small {
+    -fx-min-height: 14px;
+    -fx-max-height: 14px;
+}
+
+.wave-large {
+    -fx-min-height: 30px;
+    -fx-max-height: 30px;
+}
+
+.app-logo {
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+    -fx-background-radius: 8px;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-max-width: 70px;
+    -fx-max-height: 70px;
+}
+
+.app-logo-text {
+    -fx-font-size: 36px;
+    -fx-font-weight: 900;
+    -fx-text-fill: white;
+}
+
+.voice-message {
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-background-radius: 8px;
+    -fx-padding: 8 12;
+    -fx-cursor: hand;
+}
+
+.voice-player,
+.file-card {
+    -fx-background-color: rgba(255, 255, 255, 0.10);
+    -fx-background-radius: 8px;
+    -fx-padding: 8 10;
+}
+
+.voice-playing {
+    -fx-background-color: rgba(167, 139, 250, 0.22);
+}
+
+.file-card {
+    -fx-cursor: hand;
+}
+
+.file-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+}
+
+.file-name {
+    -fx-font-weight: 800;
+}
+
+.emoji-button {
+    -fx-font-size: 20px;
+    -fx-min-width: 48px;
+    -fx-min-height: 42px;
+    -fx-background-color: #35204f;
+}
+
+.tab-pane,
+.scroll-pane {
+    -fx-background-color: #13091f;
+}
+
+.avatar-preview {
+    -fx-background-radius: 8px;
+}
+
+.server-header,
+.page {
+    -fx-background-color: #13091f;
+}
+
+.brand-small,
+.section-title {
+    -fx-text-fill: white;
+    -fx-font-weight: 800;
+}
+
+.subtitle {
+    -fx-text-fill: #a78bfa;
 }

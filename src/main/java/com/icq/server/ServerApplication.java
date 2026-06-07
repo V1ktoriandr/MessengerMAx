@@ -11,7 +11,7 @@ public class ServerApplication extends Application {
         FXMLLoader loader = new FXMLLoader(ServerApplication.class.getResource("/fxml/server.fxml"));
         Scene scene = new Scene(loader.load(), 1100, 700);
         scene.getStylesheets().add(ServerApplication.class.getResource("/css/style.css").toExternalForm());
-        stage.setTitle("ICQ Server");
+        stage.setTitle("Messenger MAX Server");
         stage.setScene(scene);
         stage.setMinWidth(900);
         stage.setMinHeight(600);

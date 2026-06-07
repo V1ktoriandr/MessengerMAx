@@ -14,7 +14,7 @@
             <padding>
                 <Insets bottom="14.0" left="18.0" right="18.0" top="14.0" />
             </padding>
-            <Label styleClass="brand-small" text="ICQ Server" />
+            <Label styleClass="brand-small" text="Messenger MAX Server" />
             <Label fx:id="statusLabel" styleClass="subtitle" text="Starting..." HBox.hgrow="ALWAYS" />
             <Button onAction="#stopServer" text="Stop" />
         </HBox>

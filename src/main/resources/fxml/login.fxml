@@ -3,21 +3,32 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="360.0" prefWidth="440.0" styleClass="page" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icq.gui.client.LoginController">
+<BorderPane prefHeight="560.0" prefWidth="860.0" styleClass="auth-page" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.icq.gui.client.LoginController">
     <center>
-        <VBox alignment="CENTER" maxWidth="320.0" spacing="16.0" styleClass="login-panel">
-            <padding>
-                <Insets bottom="28.0" left="28.0" right="28.0" top="28.0" />
-            </padding>
-            <Label styleClass="brand-title" text="ICQ" />
-            <Label styleClass="subtitle" text="Connect to messenger server" />
-            <TextField fx:id="serverIpField" promptText="Server IP" />
-            <TextField fx:id="usernameField" promptText="Username" />
-            <Button fx:id="connectButton" maxWidth="Infinity" onAction="#connect" text="Connect" />
-        </VBox>
+        <HBox alignment="CENTER" maxWidth="780.0" spacing="0.0" styleClass="auth-shell">
+            <VBox alignment="CENTER" prefWidth="340.0" spacing="0.0" styleClass="auth-brand">
+                <padding>
+                    <Insets bottom="36.0" left="28.0" right="28.0" top="36.0" />
+                </padding>
+                <Label maxWidth="Infinity" styleClass="auth-logo" text="Messenger MAX" />
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefWidth="400.0" spacing="14.0" styleClass="auth-card">
+                <padding>
+                    <Insets bottom="36.0" left="36.0" right="36.0" top="36.0" />
+                </padding>
+                <Label styleClass="form-title" text="Sign In" />
+                <TextField fx:id="usernameField" promptText="Login or email" />
+                <PasswordField fx:id="passwordField" promptText="Password" />
+                <Button fx:id="connectButton" maxWidth="Infinity" onAction="#connect" text="Sign In" />
+                <Button maxWidth="Infinity" onAction="#openPasswordReset" styleClass="ghost-button" text="Forgot password?" />
+                <Button maxWidth="Infinity" onAction="#openRegistration" styleClass="ghost-button" text="Create account" />
+            </VBox>
+        </HBox>
     </center>
 </BorderPane>
